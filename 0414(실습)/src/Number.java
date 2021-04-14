@@ -3,20 +3,20 @@ import java.util.Scanner;
 public class Number {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		boolean chance = false;
-		int a[] = new int[10];
+		Scanner sc = new Scanner(System.in);//Scannerí•¨ìˆ˜ ê°ì²´ ìƒì„±
+		boolean chance = false;//ë‹¹ì²¨ì—¬ë¶€ë¥¼ í™•ì¸í•´ì¤„ booleaníƒ€ì…ì˜ ë³€ìˆ˜
+		int a[] = new int[10];//10ê°œì˜ ë‚œìˆ˜ë¥¼ ì €ì¥í•  ì •ìˆ˜í˜• ë°°ì—´
 		for(int i=0; i<10; i++) {
-			a[i] = (int)(Math.random() * 50) + 1;//³­¼ö ÀúÀå
-			for(int j=0; j<i; j++) {//¹İº¹µÈ ¼ıÀÚ°¡ ÀÖ´Â °æ¿ì¸¦ È®ÀÎÇØÁÖ´Â ¹İº¹¹®
+			a[i] = (int)(Math.random() * 50) + 1;//ë‚œìˆ˜ ì €ì¥
+			for(int j=0; j<i; j++) {//ë°˜ë³µëœ ìˆ«ìê°€ ìˆëŠ” ê²½ìš°ë¥¼ í™•ì¸í•´ì£¼ëŠ” ë°˜ë³µë¬¸
 				if(a[i] == a[j]) {
 					i--;
 					break;
 				}
 			}
 		}
-		System.out.print("10°³ÀÇ ·£´ı ¼ıÀÚ Áß ÇÏ³ª¸¦ ¸ÂÃçº¸¼¼¿ä : ");
-		int input = sc.nextInt();
+		System.out.print("10ê°œì˜ ëœë¤ ìˆ«ì ì¤‘ í•˜ë‚˜ë¥¼ ë§ì¶°ë³´ì„¸ìš” : ");
+		int input = sc.nextInt();//ìˆ«ì í•˜ë‚˜ ì…ë ¥ë°›ê¸°
 		for(int i=0; i<10; i++){
 			System.out.print(a[i]+" ");
 			if(input==a[i]){
@@ -25,10 +25,10 @@ public class Number {
 		}
 		System.out.println();
 		if(chance == false){
-			System.out.println("²Î! ´ÙÀ½±âÈ¸¿¡~");
+			System.out.println("ê½! ë‹¤ìŒê¸°íšŒì—~");
 		}
 		else{
-			System.out.println("´çÃ·!");
+			System.out.println("ë‹¹ì²¨!");
 		}
 	}
 }
